@@ -1,0 +1,42 @@
+/* Apply general styles to the dashboard container */
+.container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+/* Style the heading */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style the filter dropdowns */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Style the column chart container */
+.chart-container {
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+/* Optionally style other chart elements (e.g., axes, legend) using ngx-charts' CSS classes */
+/* Example: */
+.axis-label {
+  font-size: 14px;
+}
+
+/* Add any other custom styles you need for your specific design */
+

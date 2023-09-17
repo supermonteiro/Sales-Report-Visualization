@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Sales Dashboard</h1>
+
+  <!-- Filter Dropdowns -->
+  <div class="filters">
+    <div class="filter">
+      <label for="categoryFilter">Category:</label>
+      <select id="categoryFilter" [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
+        <option *ngFor="let category of categories" [value]="category.categoryId">{{ category.name }}</option>
+      </select>
+    </div>
+
+    <div class="filter">
+      <label for="productFilter">Product:</label>
+      <select id="productFilter" [(ngModel)]="selectedProduct" (change)="onProductChange()">
+        <option *ngFor="let product of products" [value]="product.productId">{{ product.name }}</option>
+      </select>
+    </div>
+
+    <div class="filter">
+      <label for="brandFilter">Brand:</label>
+      <select id="brandFilter" [(ngModel)]="selectedBrand" (change)="onBrandChange()">
+        <option *ngFor="let brand of brands" [value]="brand.brandId">{{ brand.name }}</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Column Chart -->
+  <div class="chart-container">
+    <ngx-charts-bar-vertical
+      [view]="[chartWidth, chartHeight]"
+      [scheme]="colorScheme"
+      [results]="chartData" 
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"      
+  ></ngx-charts-bar-vertical>
+  </div>
+</div>
